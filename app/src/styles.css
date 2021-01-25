@@ -1,0 +1,14 @@
+ 
+.centeredContent {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.answersColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
