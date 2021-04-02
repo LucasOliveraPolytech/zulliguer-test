@@ -103,6 +103,7 @@ export default function DrawingView({ images, time, testPhase, testEntry }) {
               Guardar
             </Button>
             <Button
+              variant="danger"
               onClick={() => canvasDrawingRef.current.undo()}
               disabled={canvasDisabled}
             >
@@ -118,14 +119,14 @@ export default function DrawingView({ images, time, testPhase, testEntry }) {
                 time: 0,
                 callback: () => timerStoppedRef.current()
               }]}> 
-            {({ reset }) => (
+            {/*({ reset }) => (
               <Container>
                 <h1>
                   <Timer.Minutes />m
                   <Timer.Seconds />s
                 </h1>
               </Container>
-            )}
+            )*/}
           </Timer>
         </Col>
       </Row>

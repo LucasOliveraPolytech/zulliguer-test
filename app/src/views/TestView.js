@@ -29,9 +29,12 @@ export default function TestView({ images, time, testPhase, testEntry }) {
           addSurveysToEntry(values)
           break
         default:
+          break
+        }
+      if (imageState < 2) {
+        resetForm(formik.initialValues)
+        setImageState(imageState + 1)
       }
-      resetForm(formik.initialValues)
-      setImageState(imageState + 1)
     },
   })
 
@@ -64,6 +67,7 @@ export default function TestView({ images, time, testPhase, testEntry }) {
   }
   
   function finish() {
+    console.log("Test entry: ", testEntry)
     history.push('/text'+ ++testPhase)
   }
 
@@ -118,14 +122,14 @@ export default function TestView({ images, time, testPhase, testEntry }) {
                 time: 0,
                 callback: () => timerStoppedRef.current()
               }]}> 
-            {({ reset }) => (
+            {/*({ reset }) => (
               <Container>
                 <h1>
                   <Timer.Minutes />m
                   <Timer.Seconds />s
                 </h1>
               </Container>
-            )}
+            )*/}
           </Timer>
         </Col>
       </Row>

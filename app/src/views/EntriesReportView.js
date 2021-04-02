@@ -45,7 +45,7 @@ export default function EntriesReportView() {
       setLoading(false)
     }
   }
-  
+
   if(entriesQueried) {
     return <EntriesReport entries={entries} />
   } else {
